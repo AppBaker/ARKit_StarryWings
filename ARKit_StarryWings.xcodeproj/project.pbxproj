@@ -37,6 +37,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E42DA0182248C173009F2A31 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4A5B2B422477DC200A456A4 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E42DA0192248C195009F2A31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4A5B2B622477DC200A456A4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E42DA01A2248C1A7009F2A31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4A5B2B022477DC200A456A4 /* AppDelegate.swift */,
+				E4A5B2B922477DC500A456A4 /* Assets.xcassets */,
+				E4A5B2BB22477DC500A456A4 /* LaunchScreen.storyboard */,
+				E4A5B2B222477DC200A456A4 /* art.scnassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E4A5B2A422477DC100A456A4 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +83,9 @@
 		E4A5B2AF22477DC100A456A4 /* ARKit_StarryWings */ = {
 			isa = PBXGroup;
 			children = (
-				E4A5B2B022477DC200A456A4 /* AppDelegate.swift */,
-				E4A5B2B222477DC200A456A4 /* art.scnassets */,
-				E4A5B2B422477DC200A456A4 /* ViewController.swift */,
-				E4A5B2B622477DC200A456A4 /* Main.storyboard */,
-				E4A5B2B922477DC500A456A4 /* Assets.xcassets */,
-				E4A5B2BB22477DC500A456A4 /* LaunchScreen.storyboard */,
+				E42DA01A2248C1A7009F2A31 /* Supporting Files */,
+				E42DA0182248C173009F2A31 /* Controllers */,
+				E42DA0192248C195009F2A31 /* View */,
 				E4A5B2BE22477DC500A456A4 /* Info.plist */,
 			);
 			path = ARKit_StarryWings;
