@@ -66,6 +66,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         node.addChildNode(loadTree(x: -1.2, y: -0.5, z: -1.2))
         
         node.addChildNode(loadGrass())
+        node.addChildNode(loadRoad())
         
         return node
     }
@@ -106,11 +107,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func loadRoad() -> SCNNode {
-        let node = SCNNode(geometry: SCNPlane(width: 3, height: 3))
+        let node = SCNNode()
+        let roadNode = SCNNode(geometry: SCNPlane(width: 2, height: 0.27))
         
-        node.eulerAngles.x = -.pi / 2
-        node.position = SCNVector3(0, -0.5, 0)
-        node.geometry?.firstMaterial?.diffuse.contents = UIColor.green
+        roadNode.eulerAngles.x = -.pi / 2
+        roadNode.position = SCNVector3(-0.5, -0.5, 1.38)
+        roadNode.geometry?.firstMaterial?.diffuse.contents = UIColor.gray
+        
+        let parkingNode = SCNNode(geometry: SCNPlane(width: 1, height: 1.2))
+        parkingNode.eulerAngles.x = -.pi / 2
+        parkingNode.position = SCNVector3(0 , -0.5, 0.7)
+        parkingNode.geometry?.firstMaterial?.diffuse.contents = UIColor.gray
+        
+        node.addChildNode(parkingNode)
+        node.addChildNode(roadNode)
         
         return node
     }
